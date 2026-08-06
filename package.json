@@ -42,9 +42,9 @@
         "react-native": "*"
     },
     "scripts": {
-        "lint": "yarn eslint .",
-        "build": "yarn tsc",
-        "prepare": "yarn build",
+        "lint": "eslint .",
+        "build": "tsc",
+        "prepare": "npm run build",
         "xbasic": "yarn --cwd examples/basic",
         "docs": "yarn --cwd docs build",
         "release": "release-it",
