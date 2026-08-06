@@ -1,16 +1,19 @@
 {
-    "name": "react-native-video",
+    "name": "@amedellin85/react-native-video",
     "version": "6.3.0",
-    "description": "A <Video /> element for react-native",
+    "description": "Custom fork of react-native-video",
     "main": "lib/index",
     "source": "src/index",
     "react-native": "src/index",
     "license": "MIT",
-    "author": "Community Contributors",
-    "homepage": "https://github.com/TheWidlarzGroup/react-native-video#readme",
+    "author": "Adrian Medellin",
+    "homepage": "https://github.com/AdrianMedellinG/react-native-video#readme",
     "repository": {
         "type": "git",
-        "url": "git@github.com:TheWidlarzGroup/react-native-video.git"
+        "url": "https://github.com/AdrianMedellinG/react-native-video.git"
+    },
+    "publishConfig": {
+        "access": "public"
     },
     "resolutions": {
         "@types/react": "~18.0.0"
