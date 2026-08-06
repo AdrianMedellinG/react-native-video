@@ -209,6 +209,14 @@ class VideoPlayer extends Component {
 
   srcAndroidList = [
     {
+      description: 'k4live test stream',
+      uri: 'https://k4live.com/live/azul8605/DYQumyp6pr/1071000.m3u8',
+    },
+    {
+      description: 'local asset MP2 audio',
+      uri: 'asset:///test-mp2.mp2',
+    },
+    {
       description: 'Another live sample',
       uri: 'https://live.forstreet.cl/live/livestream.m3u8',
     },

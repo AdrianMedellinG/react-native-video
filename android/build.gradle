@@ -42,6 +42,7 @@ def ExoplayerDependenciesList = [
     "useExoplayerDash",
     "useExoplayerHls",
     "useExoplayerRtsp",
+    "useExoplayerFfmpeg",
 ]
 
 def ExoplayerDependencies = ExoplayerDependenciesList.collectEntries { property ->
@@ -103,6 +104,7 @@ android {
         buildConfigField "boolean", "USE_EXOPLAYER_DASH", ExoplayerDependencies["useExoplayerDash"].toString()
         buildConfigField "boolean", "USE_EXOPLAYER_HLS", ExoplayerDependencies["useExoplayerHls"].toString()
         buildConfigField "boolean", "USE_EXOPLAYER_RTSP", ExoplayerDependencies["useExoplayerRtsp"].toString()
+        buildConfigField "boolean", "USE_EXOPLAYER_FFMPEG", ExoplayerDependencies["useExoplayerFfmpeg"].toString()
 
         ndk {
             abiFilters(*reactNativeArchitectures())

@@ -73,9 +73,12 @@ You can disable or enable the following features by setting the following variab
 - `useExoplayerSmoothStreaming` - Enable SmoothStreaming support
 - `useExoplayerDash` - Enable Dash support
 - `useExoplayerHls` - Enable HLS support
+- `useExoplayerFfmpeg` - Enable ExoPlayer FFmpeg audio renderers when an FFmpeg decoder extension is included in the app
 
 Each of these features enabled will increase the size of your APK, so only enable the features you need.
 By default enabled features are: `useExoplayerSmoothStreaming`, `useExoplayerDash`, `useExoplayerHls`
+
+`useExoplayerFfmpeg` enables ExoPlayer's extension renderer mode and prefers FFmpeg audio renderers over platform audio renderers. To decode audio formats such as MP2, the Android app must also include a Media3 FFmpeg decoder extension built with the `mp3` decoder enabled.
 
 
 Example:
@@ -89,6 +92,7 @@ buildscript {
     useExoplayerSmoothStreaming = true
     useExoplayerDash = true
     useExoplayerHls = true
+    useExoplayerFfmpeg = true
     ...
   }
 }

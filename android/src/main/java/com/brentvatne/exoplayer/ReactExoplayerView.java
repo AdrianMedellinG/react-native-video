@@ -729,9 +729,12 @@ public class ReactExoplayerView extends FrameLayout implements
                 allocator,
                 bufferConfig
         );
+        int extensionRendererMode = BuildConfig.USE_EXOPLAYER_FFMPEG
+                ? DefaultRenderersFactory.EXTENSION_RENDERER_MODE_PREFER
+                : DefaultRenderersFactory.EXTENSION_RENDERER_MODE_OFF;
         DefaultRenderersFactory renderersFactory =
                 new DefaultRenderersFactory(getContext())
-                        .setExtensionRendererMode(DefaultRenderersFactory.EXTENSION_RENDERER_MODE_OFF)
+                        .setExtensionRendererMode(extensionRendererMode)
                         .setEnableDecoderFallback(true)
                         .forceEnableMediaCodecAsynchronousQueueing();
 
